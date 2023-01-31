@@ -20,7 +20,9 @@ int main() {
 
     cout << "Password: ";
     cin >> password;
-
+    
+    //If the username and/or password do not match what is stored in the login.csv file, the user will be asked if they would like to try again.
+    //No access is granted until successful login happens (credentials are correct).
     if (userLogin(username, password)) {
         cout << "Login successful. Preparing the database now..." << endl;
 
@@ -31,7 +33,8 @@ int main() {
         cin >> search;
 
         searchBooks(search);
-
+        
+        //Conditional structure that asks the user if they would like to search for another book or exit the program.
         while (true) {
 
             string choice;
