@@ -18,8 +18,10 @@ public:
 
 };
 
+//Empty vector of type Book named "books". This is where the output will be stored.
 vector<Book> books;
 
+//Function that reads in the book information from the books.csv file.
 void readBooks() {
 
     ifstream booksFile("books.csv");
@@ -47,6 +49,7 @@ void readBooks() {
     }
 }
 
+//Function that searches the database for a match to what the user input says. If correct, the output will be displayed for the user.
 void searchBooks(string search) {
 
     for (Book book : books) {
