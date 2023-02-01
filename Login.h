@@ -3,9 +3,10 @@
 #include <string>
 using namespace std;
 
+//This function reads the "login.csv" file and checks if the entered username and password match any of the usernames and passwords in the file.
+//The file is read line by line and each line is split into the username and password using the "find" and "substr" string functions.
+//If a match is found, the function returns true, otherwise it returns false.
 
-//Function to check the login.csv file for accurate login credentials.
-//Returning false will ensure credentials are required each time the database is to be accessed.
 bool userLogin(string username, string password) {
 
 	ifstream loginFile("login.csv");
