@@ -22,7 +22,11 @@ public:
 //Empty vector of type Book named "books". This is where the output will be stored.
 vector<Book> books;
 
-//Function that reads in the book information from the books.csv file.
+//This function reads the "books.csv" file and stores each line of the file into a Book object.
+//Each line is split into the different fields of the Book object using the "find" and "substr" string functions.
+//The year field is extracted using a stringstream, which is then converted to an integer.
+//Finally, the book object is added to the "books" vector.
+
 void readBooks() {
 
     ifstream booksFile("books.csv");
@@ -50,7 +54,12 @@ void readBooks() {
     }
 }
 
-//Function that searches the database for a match to what the user input says. If correct, the output will be displayed for the user.
+//This function takes a single parameter search, which is a string that the user inputs to search for books.
+//It then uses a for-each loop to iterate through the books vector.
+//For each book in the books vector, it checks if the title of the book contains the search string using the std::string::find() method.
+//If it does, it prints the ISBN, title, author, publisher, publication year and description of that book using std::cout.
+//It does this for every book in the vector, printing out the information for any book whose title contains the search string.
+
 void searchBooks(string search) {
 
     for (Book book : books) {
