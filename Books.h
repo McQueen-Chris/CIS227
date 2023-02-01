@@ -5,7 +5,8 @@
 #include <sstream>
 using namespace std;
 
-//Class that holds data members 
+//This defines the class "Book" which has 6 data members : ISBN, title, author, publisher, year, and description.
+//All of these variables are of type string except for year which is an integer.
 class Book {
 
 public:
