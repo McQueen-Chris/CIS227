@@ -21,6 +21,11 @@ int main() {
     cout << "Password: ";
     cin >> password;
     
+    //Prompts the user to enter their username and password, and verifies it against the "login.csv" file using the login function.
+    //If the login is successful, it reads the "books.csv" file and stores the information in the books vector of Book objects.
+    //It then prompts the user to enter a search term and searches the books vector for books whose title contains the search term.
+    //If a match is found, it prints the information of that book.
+    
     //If the username and/or password do not match what is stored in the login.csv file, the user will be asked if they would like to try again.
     //No access is granted until successful login happens (credentials are correct).
     if (userLogin(username, password)) {
